@@ -1,0 +1,68 @@
+-- import: fifthtry.github.io/simple-dark-slides/assets
+-- import: fifthtry.github.io/simple-dark-slides as slides
+
+-- slides.total: 11
+
+-- slides.show-full-screen: true
+
+-- slides.presentation:
+embed: false
+
+-- slides.title-slide: Add slide title here
+number: 1
+subtitle: Add subtitle here
+
+-- slides.section-header: Add section header here
+number: 2
+
+-- slides.title-and-body: Add slide title here
+number: 3
+Add body here...
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+- sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+
+-- slides.title-and-2-columns: Add slide title here
+number: 4
+
+--- slides.left-column:
+image-left: $assets.files.image-placeholder.png
+
+--- slides.right-column:
+
+Add body here...
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+- sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+
+-- slides.title-only: Add slide title here
+number: 5
+image: $assets.files.image-placeholder.png
+
+-- slides.one-column-text: Add slide title here
+number: 6
+image: $assets.files.image-placeholder.png
+
+orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+
+-- slides.main-point: Add slide title here
+number: 7
+
+-- slides.section-title-and-description: Add slide title here
+number: 8
+subtitle: Add subtitle here
+image: $assets.files.image-placeholder.png
+
+-- slides.caption: Add caption here
+number: 9
+image: $assets.files.image-placeholder.png
+
+-- slides.big-number: Add big caption here
+number: 10
+subtitle: Add subtitle here
+
+-- slides.blank: 
+number: 11
