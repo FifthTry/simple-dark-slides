@@ -5,6 +5,7 @@ zip: github.com/fifthtry/simple-dark-slides/archive/refs/heads/main.zip
 base: https://raw.githubusercontent.com/fifthtry/simple-dark-slides/main
 
 -- fpm.dependency: fifthtry.github.io/package-doc as pd
+-- fpm.dependency: fifthtry.github.io/slides as slides
 -- fpm.dependency: fifthtry.github.io/Roboto
 
 

@@ -1,35 +1,30 @@
 -- import: fifthtry.github.io/simple-dark-slides/assets
 -- import: fifthtry.github.io/package-doc/doc as pd
 -- import: fifthtry.github.io/package-doc/typography as tf
-
--- integer total: 11
+-- import: fifthtry.github.io/slides as slides 
 
 -- boolean show-full-screen: false
-
--- integer slide-no: 1
 
 -- boolean is-mobile: false
 
 -- is-mobile: true
 if: $ftd.device == mobile
 
--- ftd.font-size big-font-desktop:
-line-height: 84
-size: 64
-letter-spacing: 1
+-- string right-body:
 
--- ftd.type big-font: $fpm.font-display
-desktop: $big-font-desktop
-mobile: $big-font-desktop
-xl: $big-font-desktop
-weight: 400
+Add body here...
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+- sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
 
 
 
 
 
--- ft.page: 
-id: page
+
+
+-- ft.page:
+id: page 
 
 -- pd.package: Simple Dark Slides
 name: fifthtry.github.io/simple-dark-slides
@@ -41,47 +36,38 @@ lines into `FPM.ftd` file:
 lang: ftd
 
 \-- fpm.dependency: fifthtry.github.io/simple-dark-slides as slides
+\-- fpm.dependency: fifthtry.github.io/slides as slide
 \-- fpm.auto-import: slides
+\-- fpm.auto-import: slide
 
 -- pd.hidden-code: Basic usage example
  
-\-- slides.total: <total count of slides - integer>
-\-- slides.presentation:
+
+\-- slide.presentation:
 embed: <boolean true(if embeded inside page) - default false>
+current : integer
 
-\-- slides.title-slide: Add slide title here
-number: 1
+\--- slides.title-slide: Add slide title here
 subtitle: Add subtitle here
 
-\-- slides.section-header: Add section header here
-number: 2
+\--- slides.section-header: Add section header here
 
-\-- slides.title-and-body: Add slide title here
-number: 3
-Add body here...
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-- sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
 
-\-- slides.title-and-2-columns: Add slide title here
-number: 4
-
-\--- slides.left-column:
-image-left: $assets.files.image-placeholder.png
-
-\--- slides.right-column:
+\--- slides.title-and-body: Add slide title here
 
 Add body here...
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
 - sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 - Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
 
-\-- slides.title-only: Add slide title here
-number: 5
+\--- slides.title-and-2-columns: Add slide title here
+left-image: $assets.files.image-placeholder.png
+right-body: $right-body
+
+\--- slides.title-only: Add slide title here
 image: $assets.files.image-placeholder.png
 
-\-- slides.one-column-text: Add slide title here
-number: 6
+\--- slides.one-column-text: Add slide title here
 image: $assets.files.image-placeholder.png
 
 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -89,97 +75,84 @@ orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in
 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 
-\-- slides.main-point: Add slide title here
-number: 7
+\--- slides.main-point: Add slide title here
 
-\-- slides.section-title-and-description: Add slide title here
-number: 8
+
+\--- slides.section-title-and-description: Add slide title here
 subtitle: Add subtitle here
 image: $assets.files.image-placeholder.png
 
-\-- slides.caption: Add caption here
-number: 9
+\--- slides.caption: Add caption here
 image: $assets.files.image-placeholder.png
 
-\-- slides.big-number: Add big caption here
-number: 10
+\--- slides.big-number: Add big caption here
 subtitle: Add subtitle here
 
-\-- slides.blank: 
-number: 11
+\--- slides.blank: 
 
 
 
 
--- presentation:
+
+
+
+
+
+-- slides.presentation:
+bg-color: $fpm.color.main.background.step-1
+overlay-bg-color: $fpm.color.main.text-strong
 embed: true
+current: 1
 
--- title-slide: Add slide title here
-number: 1
+--- title-slide: Add slide title here
 subtitle: Add subtitle here
 
--- section-header: Add section header here
-number: 2
+--- section-header: Add section header here
 
--- title-and-body: Add slide title here
-number: 3
-Add body here...
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-- sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-
--- title-and-2-columns: Add slide title here
-number: 4
-
----  left-column:
-image-left: $assets.files.image-placeholder.png
-
----  right-column:
+--- title-and-body: Add slide title here
 
 Add body here...
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
 - sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 - Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
 
--- title-only: Add slide title here
-number: 5
+--- title-and-2-columns: Add slide title here
+left-image: $assets.files.image-placeholder.png
+right-body: $right-body
+
+--- title-only: Add slide title here
 image: $assets.files.image-placeholder.png
 
--- one-column-text: Add slide title here
-number: 6
+
+--- one-column-text: Add slide title here
 image: $assets.files.image-placeholder.png
 
-orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+nostrud exercitation ullamco laboris nisi ut orem ipsum dolor sit amet, 
+consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+laboris nisi ut orem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
 
--- main-point: Add slide title here
-number: 7
+--- main-point: Add slide title here
 
--- section-title-and-description: Add slide title here
-number: 8
+--- section-title-and-description: Add slide title here
 subtitle: Add subtitle here
 image: $assets.files.image-placeholder.png
 
--- caption: Add caption here
-number: 9
+--- caption: Add caption here
 image: $assets.files.image-placeholder.png
 
--- big-number: Add big caption here
-number: 10
+
+--- big-number: Add big caption here
 subtitle: Add subtitle here
 
--- blank: 
-number: 11
-
-
+--- blank: 
 
 -- container: page
 
 -- ftd.column:
 margin-top: $fpm.space.space-5
-
 
 -- tf.markdown:
 
@@ -197,14 +170,18 @@ Press `esc` key to exit full screen view.
 
 
 
+
+
 -- ftd.column title-slide:
 caption title:
 string subtitle:
+optional integer move-top:
+optional integer move-bottom:
+optional boolean move-center: true
 optional integer number:
-if: $slide-no == $number
+if: $PARENT.current == $SIBLING-INDEX
 width: fill
 height: fill
-padding-horizontal if $is-mobile: $fpm.space.space-4
 
 --- ftd.row:
 height: fill
@@ -244,21 +221,29 @@ align: center
 
 -- ftd.row section-header:
 caption title:
+optional integer move-top:
+optional integer move-bottom:
+boolean move-center: false
+optional string font-size:
 optional integer number:
-if: $slide-no == $number
+if: $PARENT.current == $SIBLING-INDEX
 width: fill
 height: fill
-padding-horizontal if $is-mobile: $fpm.space.space-4
 
 --- ftd.column:
 width: fill
 id: description
 align: center
+z-index: 1000
 
 --- ftd.column:
 width: fill
 align: center
 max-width: 1200
+
+--- ftd.column:
+align: center
+id: change
 
 --- ftd.text: $title
 role: $fpm.type.heading-hero
@@ -277,11 +262,14 @@ width: fill
 -- ftd.column title-and-body:
 caption title:
 body body:
+optional integer move-top:
+optional integer move-bottom:
+boolean move-center: true
+string font-size: regular
 optional integer number:
-if: $slide-no == $number
+if: $PARENT.current == $SIBLING-INDEX
 width: fill
 height: fill
-padding-horizontal if $is-mobile: $fpm.space.space-4
 
 --- ftd.row:
 height: fill
@@ -291,6 +279,7 @@ width: fill
 width: fill
 id: description
 padding-top: 36
+align: center
 
 --- ftd.column:
 width: fill
@@ -298,16 +287,51 @@ align: center
 spacing: 36
 max-width: 1200
 
+--- ftd.column:
+align: center
+spacing: 32
+
 --- ftd.text: $title
 role: $fpm.type.heading-hero
 color: $fpm.color.main.text-strong
 width: fill
 
 --- ftd.text:
+if: $font-size == small
+text: $body
+color: $fpm.color.main.text-strong
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+role: $fpm.type.fine-print
+
+--- ftd.text:
+if: $font-size == regular
+text: $body
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text-strong
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+
+--- ftd.text:
+if: $font-size == medium
 text: $body
 role: $fpm.type.copy-large
 color: $fpm.color.main.text-strong
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
 width: fill
+
+--- ftd.text:
+if: $font-size == large
+text: $body
+role: $fpm.type.label-big
+color: $fpm.color.main.text-strong
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+
 
 
 
@@ -320,13 +344,18 @@ width: fill
 
 -- ftd.column title-and-2-columns:
 caption title:
+optional integer move-top:
+optional integer move-bottom:
+boolean move-center: false
+string font-size: small
 optional integer number:
-if: $slide-no == $number
+optional body left-body:
+optional ftd.image-src left-image:
+optional body right-body:
+optional ftd.image-src right-image:  
+if: $PARENT.current == $SIBLING-INDEX
 width: fill
 height: fill
-padding-horizontal if $is-mobile: $fpm.space.space-4
-open: true
-append-at: text-contain
 
 --- ftd.row:
 height: fill
@@ -334,7 +363,8 @@ width: fill
 
 --- ftd.column:
 width: fill
-padding-top: 24
+padding-top if not $move-center: 24
+align: center
 
 --- ftd.column:
 width: fill
@@ -359,6 +389,96 @@ width: fill
 --- ftd.row: 
 id: text-contain
 width: fill
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+spacing: 36
+
+--- ftd.column:
+width: fill
+id: left
+
+--- ftd.row:
+if: $left-body is not null
+width: fill
+
+--- ftd.text:
+if: $font-size == small
+text: $left-body
+color: $fpm.color.main.text-strong
+width: fill
+role: $fpm.type.fine-print
+
+--- ftd.text:
+if: $font-size == regular
+text: $left-body
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text-strong
+width: fill
+
+--- ftd.text:
+if: $font-size == medium
+text: $left-body
+role: $fpm.type.copy-large
+color: $fpm.color.main.text-strong
+width: fill
+
+--- ftd.text:
+if: $font-size == large
+text: $left-body
+role: $fpm.type.label-big
+color: $fpm.color.main.text-strong
+width: fill
+
+--- container: left
+
+--- ftd.image:
+if: $left-body is null
+src: $left-image
+width: fill
+height: auto
+
+--- container: text-contain
+
+
+--- ftd.row:
+if: $right-body is not null
+width: fill
+
+--- ftd.text:
+if: $font-size == small
+text: $right-body
+color: $fpm.color.main.text-strong
+width: fill
+role: $fpm.type.fine-print
+
+--- ftd.text:
+if: $font-size == regular
+text: $right-body
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text-strong
+width: fill
+
+--- ftd.text:
+if: $font-size == medium
+text: $right-body
+role: $fpm.type.copy-large
+color: $fpm.color.main.text-strong
+width: fill
+
+--- ftd.text:
+if: $font-size == large
+text: $right-body
+role: $fpm.type.label-big
+color: $fpm.color.main.text-strong
+width: fill
+
+--- container: ftd.main
+
+--- ftd.image:
+if: $right-body is null
+src: $right-image
+width: fill
+height: auto
 
 
 
@@ -428,12 +548,15 @@ height: auto
 -- ftd.column title-only:
 caption title:
 optional ftd.image-src image:
+optional integer move-top:
+optional integer move-bottom:
+boolean move-center: true
+optional string font-size:
 optional integer number:
 boolean center-image: false
-if: $slide-no == $number
+if: $PARENT.current == $SIBLING-INDEX
 width: fill
 height: fill
-padding-horizontal if $is-mobile: $fpm.space.space-4
 
 --- ftd.row:
 if: not $is-mobile
@@ -445,7 +568,8 @@ margin-top if not $show-full-screen: -24
 
 --- ftd.column:
 width: fill
-align: top
+padding-top if not $move-center: 24
+align if $move-center: center
 id: description
 
 --- ftd.column:
@@ -470,6 +594,8 @@ max-width: auto
 height: auto
 max-height if not $is-mobile: 400
 max-height if $is-mobile: 320
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
 
 --- container: ftd.main
 
@@ -506,6 +632,8 @@ max-width: auto
 height: auto
 max-height if not $is-mobile: 400
 max-height if $is-mobile: 320
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
 
 
 
@@ -520,8 +648,12 @@ max-height if $is-mobile: 320
 caption title:
 body body:
 optional ftd.image-src image:
+optional integer move-top:
+optional integer move-bottom:
+boolean move-center: true
+optional string font-size: regular
 optional integer number:
-if: $slide-no == $number
+if: $PARENT.current == $SIBLING-INDEX
 width: fill
 height: fill
 padding-horizontal if $is-mobile: $fpm.space.space-4
@@ -532,7 +664,8 @@ width: fill
 
 --- ftd.column:
 width: fill
-align: center
+padding-top if not $move-center: 24
+align if $move-center: center
 
 --- ftd.row:
 height: fill
@@ -552,9 +685,40 @@ role: $fpm.type.heading-hero
 color: $fpm.color.main.text-strong
 
 --- ftd.text:
+if: $font-size == small
+text: $body
+color: $fpm.color.main.text-strong
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+role: $fpm.type.fine-print
+
+--- ftd.text:
+if: $font-size == regular
 text: $body
 role: $fpm.type.copy-tight
 color: $fpm.color.main.text-strong
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+
+--- ftd.text:
+if: $font-size == medium
+text: $body
+role: $fpm.type.copy-large
+color: $fpm.color.main.text-strong
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+
+--- ftd.text:
+if: $font-size == large
+text: $body
+role: $fpm.type.label-big
+color: $fpm.color.main.text-strong
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
 
 --- container: description
 
@@ -578,8 +742,13 @@ height: fill
 
 
 -- ftd.row main-point:
+optional string title:
+optional integer move-top:
+optional integer move-bottom:
+boolean move-center: true
+optional string font-size:
 optional integer number: 
-if: $slide-no == $number
+if: $PARENT.current == $SIBLING-INDEX
 caption title:
 width: fill
 height: fill
@@ -588,7 +757,8 @@ padding-horizontal if $is-mobile: $fpm.space.space-4
 --- ftd.column:
 width: fill
 id: description
-align: center
+align if $move-center: center
+padding-top if not $move-center: 64
 
 --- ftd.column:
 width: fill
@@ -614,11 +784,14 @@ caption title:
 string subtitle:
 optional body body:
 optional ftd.image-src image:
+optional integer move-top:
+optional integer move-bottom:
+boolean move-center: true
+optional string font-size:
 optional integer number:
-if: $slide-no == $number
+if: $PARENT.current == $SIBLING-INDEX
 width: fill
 height: fill
-padding-horizontal if $is-mobile: $fpm.space.space-4
 
 --- ftd.row:
 height: fill
@@ -626,7 +799,8 @@ width: fill
 
 --- ftd.column:
 width: fill
-align: center
+align if $move-center: center
+padding-top if not $move-center: 64
 
 --- ftd.row:
 width: fill
@@ -658,13 +832,48 @@ margin-top: $fpm.space.space-6
 --- ftd.column:
 width: fill
 align: center
+id: left-container
+
+--- ftd.row:
+if: $body is not null
 
 --- ftd.text:
-if: $body is not null
+if: $font-size == small
+text: $body
+color: $fpm.color.main.text-strong
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+role: $fpm.type.fine-print
+
+--- ftd.text:
+if: $font-size == regular
+text: $body
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text-strong
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+
+--- ftd.text:
+if: $font-size == medium
 text: $body
 role: $fpm.type.copy-large
 color: $fpm.color.main.text-strong
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
 width: fill
+
+--- ftd.text:
+if: $font-size == large
+text: $body
+role: $fpm.type.label-big
+color: $fpm.color.main.text-strong
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+
+--- container: left-container
 
 --- ftd.image:
 if: $body is null
@@ -686,9 +895,12 @@ caption title:
 optional ftd.image-src image:
 width: fill
 height: fill
+optional integer move-top:
+optional integer move-bottom:
+boolean move-center: true
+optional string font-size:
 optional integer number:
-if: $slide-no == $number
-padding-horizontal if $is-mobile: $fpm.space.space-4
+if: $PARENT.current == $SIBLING-INDEX
 
 --- ftd.row:
 width: fill
@@ -698,7 +910,8 @@ id: main
 --- ftd.column:
 if: $image is not null
 id: description
-align: center
+align if $move-center: center
+padding-top if not $move-center: 64
 width: fill
 
 --- ftd.column:
@@ -780,8 +993,12 @@ margin-bottom: 36
 -- ftd.column big-number:
 caption title:
 string subtitle:
+optional integer move-top:
+optional integer move-bottom:
+boolean move-center: true
+optional string font-size:
 optional integer number:
-if: $slide-no == $number
+if: $PARENT.current == $SIBLING-INDEX
 width: fill
 height: fill
 padding-horizontal if $is-mobile: $fpm.space.space-4
@@ -793,7 +1010,8 @@ width: fill
 --- ftd.column:
 width: fill
 id: description
-align: center
+align if $move-center: center
+padding-top if not $move-center: 64
 
 --- ftd.column:
 width: fill
@@ -802,7 +1020,7 @@ spacing: 36
 max-width: 1200
 
 --- ftd.text: $title
-role: $big-font
+role: $fpm.type.heading-hero
 color: $fpm.color.main.text-strong
 align: center
 text-align: center
@@ -824,8 +1042,12 @@ text-align: center
 
 
 -- ftd.column blank:
+optional integer move-top:
+optional integer move-bottom:
+boolean move-center: false
+optional string font-size:
 optional integer number:
-if: $slide-no == $number
+if: $PARENT.current == $SIBLING-INDEX
 width: fill
 height: fill
 padding-horizontal if $is-mobile: $fpm.space.space-4
@@ -844,370 +1066,3 @@ width: fill
 align: center
 spacing: 36
 max-width: 1200
-
-
-
-
-
-
-
-
-
-
--- ftd.column mobile-overlay:
-height: calc 100% - 0px
-width: fill
-anchor: window
-position: center
-background-color: $fpm.color.main.text-strong
-z-index: 10
-$on-click$: $show-full-screen = false
-
-
-
-
-
-
-
-
-
-
--- ftd.column presentation:
-boolean embed: false
-optional ftd.image-src bg-image:
-background-color: $black
-integer padding: 0
-width: fill
-height: fill
-open: true
-append-at: content
-id: presentation
-
---- mobile-overlay:
-if: $show-full-screen
-if: $is-mobile
-
---- container: ftd.main
-
---- ftd.column:
-if: $show-full-screen
-anchor: window
-top:0
-left: 0
-height: calc 100% - 0px
-height if $is-mobile: auto
-width: calc 100% - 0px
-background-color: $black
-position if $is-mobile: center
-z-index: 99999
-id: full-screen-container
-$on-global-key[esc]$: $show-full-screen = false
-
---- container: full-screen-container
-
---- ftd.column:
-id: switch-container
-width: fill
-height: fill
-height if $is-mobile: auto
-padding if not $is-mobile: $padding
-
---- ftd.column:
-if: not $is-mobile
-id: content
-align: center
-width: fill
-height: fill
-background-image if $bg-image is not null: $bg-image
-background-color if $bg-image is null: $black
-
---- container: switch-container
-
---- ftd.column:
-if: $is-mobile
-height: 200
-width: fill
-
---- ftd.column:
-id: content
-width: fill
-height: 510
-padding-horizontal: $fpm.space.space-5
-scale: 0.4
-min-width: 802
-anchor: parent
-position: center
-
---- container: full-screen-container
-
---- panel:
-
---- container: ftd.main
-
---- ftd.column:
-if: not $show-full-screen
-width: fill
-height: fill
-id: hidden-screen-container
-background-image if $bg-image is not null: $bg-image
-background-color if $bg-image is null: $black
-
---- ftd.column:
-if: not $is-mobile
-width: fill
-height if not $embed: fill
-height if $embed: 350
-id: inner
-
---- ftd.column:
-if: not $embed
-id: content
-align: center
-width: fill
-height: fill
-max-width: 1200
-
---- container: inner
-
---- ftd.column:
-if: $embed
-id: content
-align: center
-width: 1000
-scale: 0.6
-height: 290
-padding-horizontal: $fpm.space.space-5
-move-left: 150
-
---- container: hidden-screen-container
-
---- ftd.column:
-if: $is-mobile
-height: 200
-width: fill
-
---- ftd.column:
-id: content
-width: fill
-height: 450
-padding-horizontal: $fpm.space.space-5
-scale: 0.4
-min-width: 802
-anchor: parent
-position: center
-
---- container: hidden-screen-container
-
---- panel:
-if: $embed
-
-
-
-
-
-
-
-
-
-
--- ftd.column panel:
-width: fill
-boolean active: false
-boolean show-left: false
-boolean show-right: false
-background-color: $fpm.color.main.border
-
---- ftd.column:
-if: not $show-full-screen
-id: full-screen
-align: center
-anchor: parent
-right: 16
-bottom: 8
-
---- ftd.image:
-if: not $active
-src: $assets.files.controls-img.full-screen-active.svg
-$on-click$: $show-full-screen = true
-$on-global-key[ctrl-f]$: $show-full-screen = true
-$on-mouse-enter$: $active = true
-$on-mouse-leave$: $active = false
-
---- container: full-screen
-
---- ftd.image:
-if: $active
-src: $assets.files.controls-img.full-screen.svg
-$on-click$: $show-full-screen = true
-$on-global-key[ctrl-f]$: $show-full-screen = true
-$on-mouse-enter$: $active = true
-$on-mouse-leave$: $active = false
-
---- container: ftd.main
-
---- ftd.row:
-if: not $is-mobile
-align: center
-id: slots
-
---- ftd.row:
-if: not $show-full-screen
-id: left-arrow
-align: center
-
---- ftd.image:
-if: not $show-left
-src: $assets.files.controls-img.left-active.svg
-$on-click$: decrement $slide-no clamp 1 $total
-width: 24
-height: 24
-align: center
-$on-mouse-enter$: $show-left = true
-$on-mouse-leave$: $show-left = false
-
---- container: left-arrow
-
---- ftd.image:
-if: $show-left
-src: $assets.files.controls-img.left.svg
-$on-click$: decrement $slide-no clamp 1 $total
-width: 24
-height: 24
-align: center
-$on-mouse-enter$: $show-left = true
-$on-mouse-leave$: $show-left = false
-
---- container: slots
-
---- ftd.row:
-if: $show-full-screen
-$on-global-key[left]$: decrement $slide-no by 1  clamp 1 $total
-
-
---- container: slots
-
---- show-controls:
-if: not $show-full-screen
-align: center
-
---- container: slots
-
---- ftd.row:
-if: not $show-full-screen
-id: right-arrow
-align: center
-
---- ftd.image:
-if: not $show-right
-src: $assets.files.controls-img.right-active.svg
-$on-click$: increment $slide-no clamp 1 $total
-width: 24
-align: center
-$on-mouse-enter$: $show-right = true
-$on-mouse-leave$: $show-right = false
-
---- container: right-arrow
-
---- ftd.image:
-if: $show-right
-src: $assets.files.controls-img.right.svg
-$on-click$: increment $slide-no clamp 1 $total
-width: 24
-align: center
-$on-mouse-enter$: $show-right = true
-$on-mouse-leave$: $show-right = false
-
---- container: ftd.main
-
---- ftd.row:
-if: $is-mobile
-align: center
-id: slots
-
---- ftd.row:
-id: left-arrow
-align: center
-
---- ftd.image:
-src: $assets.files.controls-img.left-active.svg
-$on-click$: decrement $slide-no clamp 1 $total
-width: 24
-height: 24
-align: center
-
---- container: slots
-
---- ftd.row:
-$on-global-key[left]$: decrement $slide-no by 1  clamp 1 $total
-
---- show-controls:
-align: center
-
---- container: slots
-
---- ftd.row:
-id: right-arrow
-align: center
-
---- ftd.image:
-src: $assets.files.controls-img.right-active.svg
-$on-click$: increment $slide-no clamp 1 $total
-width: 24
-align: center
-$on-mouse-enter$: $show-right = true
-$on-mouse-leave$: $show-right = false
-
---- container: slots
-
---- ftd.row:
-if: $show-full-screen
-$on-global-key[right]$: increment $slide-no  by 1 clamp 1 $total
-
-
-
-
-
-
-
-
-
-
--- ftd.row show-controls:
-padding: 11
-border-radius: 10
-spacing: 8
-min-width: 90
-color: $fpm.color.main.text-strong
-
---- ftd.integer: $slide-no
-align: center
-width: fill
-text-align: center
-
-
---- ftd.text: of 
-align: center
-width: fill
-text-align: center
-
---- ftd.integer: $total
-align: center
-width: fill
-text-align: center
-
-
-
-
-
-
-
-
-
-
--- ftd.color black:
-light: black
-dark: black
-
--- ftd.color white:
-light: white
-dark: white
