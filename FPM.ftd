@@ -4,6 +4,20 @@
 zip: github.com/fifthtry/simple-dark-slides/archive/refs/heads/main.zip
 base: https://raw.githubusercontent.com/fifthtry/simple-dark-slides/main
 
--- fpm.dependency: fifthtry.github.io/doc-site as ds
+-- fpm.dependency: fifthtry.github.io/package-doc as pd
+-- fpm.dependency: fifthtry.github.io/slides as slides
+-- fpm.dependency: fifthtry.github.io/Roboto
 
--- fpm.auto-import: ds
+
+-- fpm.auto-import: pd
+-- fpm.auto-import: fpm
+-- fpm.auto-import: pd/typography as tf
+-- fpm.auto-import: pd/code-block as cb
+-- fpm.auto-import: pd/forest-theme as ft
+-- fpm.auto-import: fifthtry.github.io/simple-dark-slides/FPM/config
+
+
+-- fpm.sitemap:
+
+# Home: index.html
+# Full Page Demo: /sample/
