@@ -3,7 +3,6 @@
 -- import: fifthtry.github.io/slides as slide
 
 
--- slide.show-full-screen: true
 
 -- slide.presentation:
 bg-color: $fpm.color.main.background.step-1

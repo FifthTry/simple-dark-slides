@@ -3,8 +3,6 @@
 -- import: fifthtry.github.io/package-doc/typography as tf
 -- import: fifthtry.github.io/slides as slides 
 
--- boolean show-full-screen: false
-
 -- boolean is-mobile: false
 
 -- is-mobile: true
@@ -101,15 +99,80 @@ subtitle: Add subtitle here
 -- slides.presentation:
 bg-color: $fpm.color.main.background.step-1
 overlay-bg-color: $fpm.color.main.text-strong
-embed: true
-current: 1
+show-full-screen: false
 
---- title-slide: Add slide title here
+--- title-slide: Add slide 2 title here
 subtitle: Add subtitle here
 
 --- section-header: Add section header here
 
 --- title-and-body: Add slide title here
+
+Add body here...
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+- sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+
+--- title-and-2-columns: Add slide title here
+left-image: $assets.files.image-placeholder.png
+right-body: $right-body
+
+--- title-only: Add slide title here
+image: $assets.files.image-placeholder.png
+
+
+--- one-column-text: Add slide title here
+image: $assets.files.image-placeholder.png
+
+orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+nostrud exercitation ullamco laboris nisi ut orem ipsum dolor sit amet, 
+consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+laboris nisi ut orem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+
+--- main-point: Add slide title here
+
+--- section-title-and-description: Add slide title here
+subtitle: Add subtitle here
+image: $assets.files.image-placeholder.png
+
+--- caption: Add caption here
+image: $assets.files.image-placeholder.png
+
+
+--- big-number: Add big caption here
+subtitle: Add subtitle here
+
+--- blank: 
+
+-- container: page
+
+-- ftd.column:
+margin-top: $fpm.space.space-5
+
+-- tf.markdown:
+
+Click on `full-screen` mode `squre` icon to see full-screen view. On `full-screen`
+mode to navigate slides press `left` OR `right` arrow keys to move to left OR 
+right slide. 
+
+Press `esc` key to exit full screen view.
+
+-- container: page
+
+
+-- slides.presentation:
+bg-color: $fpm.color.main.background.step-1
+overlay-bg-color: $fpm.color.main.text-strong
+show-full-screen: false
+
+--- title-slide: Add slide1 title here
+subtitle: Add subtitle here
+
+--- section-header: Add section header here
+
+--- title-and-body: Add slide1 title here
 
 Add body here...
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -563,8 +626,8 @@ if: not $is-mobile
 id: main
 height: fill
 width: fill
-padding-top if $show-full-screen: $fpm.space.space-6
-margin-top if not $show-full-screen: -24
+padding-top if $PARENT.show-full-screen: $fpm.space.space-6
+margin-top if not $PARENT.show-full-screen: -24
 
 --- ftd.column:
 width: fill
@@ -607,7 +670,7 @@ width: fill
 
 --- ftd.column:
 width: fill
-padding-top if $show-full-screen: 36
+padding-top if $PARENT.show-full-screen: 36
 id: description
 
 --- ftd.column:
@@ -742,14 +805,13 @@ height: fill
 
 
 -- ftd.row main-point:
-optional string title:
+caption title:
 optional integer move-top:
 optional integer move-bottom:
 boolean move-center: true
 optional string font-size:
 optional integer number: 
 if: $PARENT.current == $SIBLING-INDEX
-caption title:
 width: fill
 height: fill
 padding-horizontal if $is-mobile: $fpm.space.space-4
@@ -931,8 +993,8 @@ max-width: 740
 if: not $is-mobile
 src: $image
 width: fill
-max-width if not $show-full-screen: 600
-max-width if $show-full-screen: 800
+max-width if not $PARENT.show-full-screen: 600
+max-width if $PARENT.show-full-screen: 800
 max-width if $is-mobile: 600
 height: auto
 
