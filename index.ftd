@@ -42,7 +42,7 @@ lang: ftd
  
 
 \-- slide.presentation:
-embed: <boolean true(if embeded inside page) - default false>
+embed: <boolean false(if full screen mode) - default true>
 current : integer
 
 \--- slides.title-slide: Add slide title here

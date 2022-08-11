@@ -8,6 +8,7 @@
 bg-color: $fpm.color.main.background.step-1
 overlay-bg-color: $fpm.color.main.text-strong
 embed: false
+show-full-screen: true
 current: 1
 
 
