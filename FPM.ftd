@@ -7,8 +7,9 @@ base: https://raw.githubusercontent.com/fifthtry/simple-dark-slides/main
 -- fpm.dependency: fifthtry.github.io/package-doc as pd
 -- fpm.dependency: fifthtry.github.io/slides as slides
 -- fpm.dependency: fifthtry.github.io/Roboto
+-- fpm.dependency: fifthtry.github.io/roboto-mono
 
-
+-- fpm.auto-import: fifthtry.github.io/roboto-mono as mono
 -- fpm.auto-import: pd
 -- fpm.auto-import: fpm
 -- fpm.auto-import: pd/typography as tf

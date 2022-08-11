@@ -50,7 +50,6 @@ subtitle: Add subtitle here
 
 \--- slides.section-header: Add section header here
 
-
 \--- slides.title-and-body: Add slide title here
 
 Add body here...
@@ -75,7 +74,6 @@ orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in
 
 \--- slides.main-point: Add slide title here
 
-
 \--- slides.section-title-and-description: Add slide title here
 subtitle: Add subtitle here
 image: $assets.files.image-placeholder.png
@@ -87,6 +85,7 @@ image: $assets.files.image-placeholder.png
 subtitle: Add subtitle here
 
 \--- slides.blank: 
+
 
 
 
@@ -120,7 +119,6 @@ right-body: $right-body
 --- title-only: Add slide title here
 image: $assets.files.image-placeholder.png
 
-
 --- one-column-text: Add slide title here
 image: $assets.files.image-placeholder.png
 
@@ -139,7 +137,6 @@ image: $assets.files.image-placeholder.png
 
 --- caption: Add caption here
 image: $assets.files.image-placeholder.png
-
 
 --- big-number: Add big caption here
 subtitle: Add subtitle here
@@ -160,6 +157,14 @@ right slide.
 Press `esc` key to exit full screen view.
 
 -- container: page
+
+
+
+
+
+
+
+
 
 
 -- slides.presentation:
@@ -186,7 +191,6 @@ right-body: $right-body
 --- title-only: Add slide title here
 image: $assets.files.image-placeholder.png
 
-
 --- one-column-text: Add slide title here
 image: $assets.files.image-placeholder.png
 
@@ -206,12 +210,6 @@ image: $assets.files.image-placeholder.png
 --- caption: Add caption here
 image: $assets.files.image-placeholder.png
 
-
---- big-number: Add big caption here
-subtitle: Add subtitle here
-
---- blank: 
-
 -- container: page
 
 -- ftd.column:
@@ -224,7 +222,6 @@ mode to navigate slides press `left` OR `right` arrow keys to move to left OR
 right slide. 
 
 Press `esc` key to exit full screen view.
-
 
 
 
@@ -501,7 +498,6 @@ width: fill
 height: auto
 
 --- container: text-contain
-
 
 --- ftd.row:
 if: $right-body is not null
