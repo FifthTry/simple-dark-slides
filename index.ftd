@@ -97,46 +97,172 @@ subtitle: Add subtitle here
 
 -- dark-presentation:
 
---- title-slide: Add slide 2 title here
-subtitle: Add subtitle here
+--- title-slide: Regular font title of presentation
+title-font: regular
+sub-title-font: regular
+subtitle: Regular font sub-title
 
---- section-header: Add section header here
+--- title-slide: Medium font title of presentation
+title-font: medium
+sub-title-font: medium
+subtitle: Medium font sub-title
 
---- title-and-body: Add slide title here
+--- title-slide: Large font title of presentation
+title-font: large
+sub-title-font: large
+subtitle: Large font sub-title
 
-Add body here...
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-- sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+--- section-header: Section header with regular font
+title-font: regular
 
---- title-and-2-columns: Add slide title here
+--- section-header: Section header with medium font
+title-font: medium
+
+--- section-header: Section header with large font
+title-font: large
+
+--- title-and-body: Slide title with regular font
+title-font: regular
+body-font: regular
+
+Regular font size of body content
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+--- title-and-body: Slide title with medium font
+title-font: medium
+body-font: medium
+
+Medium font size of body content
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+--- title-and-body: Slide title with large font
+title-font: large
+body-font: large
+
+Large font size of body content
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+--- title-and-2-columns: Regular title of 2 columns slide
+title-font: regular
+body-font: regular
 left-image: $assets.files.image-placeholder.png
-right-body: $right-body
+right-body: 
 
---- title-only: Add slide title here
+Regular size font body here...
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+--- title-and-2-columns: Medium title of 2 columns slide
+title-font: medium
+body-font: medium
+left-image: $assets.files.image-placeholder.png
+right-body: 
+
+Medium size font body here...
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+--- title-and-2-columns: Large title of 2 columns slide
+title-font: large
+body-font: large
+left-image: $assets.files.image-placeholder.png
+right-body: 
+
+Large size font body here...
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+--- title-only: Slide title with regular font
+title-font: regular
 image: $assets.files.image-placeholder.png
 
---- one-column-text: Add slide title here
+--- title-only: Slide title with medium font
+title-font: medium
 image: $assets.files.image-placeholder.png
 
-orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-nostrud exercitation ullamco laboris nisi ut orem ipsum dolor sit amet, 
-consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-laboris nisi ut orem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-
---- main-point: Add slide title here
-
---- section-title-and-description: Add slide title here
-subtitle: Add subtitle here
+--- title-only: Slide title with large font
+title-font: large
 image: $assets.files.image-placeholder.png
 
---- caption: Add caption here
+--- one-column-text: Slide title with regular font
+title-font: regular
+body-font: regular
 image: $assets.files.image-placeholder.png
 
---- big-number: Add big caption here
-subtitle: Add subtitle here
+Regular size font body here...
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+--- one-column-text: Slide title with medium font
+title-font: medium
+body-font:  medium
+image: $assets.files.image-placeholder.png
+
+Medium size font body here...
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+--- one-column-text: Slide title with large font
+title-font: large
+body-font:  large
+image: $assets.files.image-placeholder.png
+
+Large size font body here...
+
+--- main-point: Slide title with regular font
+title-font: regular
+
+--- main-point: Slide title with medium font
+title-font: medium
+
+--- main-point: Slide title with large font
+title-font: large
+
+--- section-title-and-description: Regular font section title
+title-font: regular
+sub-title-font: regular
+subtitle: Regular font sub title here
+image: $assets.files.image-placeholder.png
+
+--- section-title-and-description: Medium font section title
+title-font: medium
+sub-title-font: medium
+body-font: medium
+subtitle: Medium font sub title here
+
+Medium font body text.
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+--- section-title-and-description: Large font section title
+title-font: large
+sub-title-font: large
+subtitle: Large font sub title here
+image: $assets.files.image-placeholder.png
+
+--- caption: Regular font slide caption 
+body-font: regular
+image: $assets.files.image-placeholder.png
+
+--- caption: Regular font slide caption 
+body-font: medium
+image: $assets.files.image-placeholder.png
+
+--- caption: Regular font slide caption 
+body-font: large
+image: $assets.files.image-placeholder.png
+
+--- big-number: Regular font big slide title
+title-font: regular
+sub-title-font: regular
+subtitle: Regular font slide sub title
+
+--- big-number: Medium font big slide title
+title-font: medium
+sub-title-font: medium
+subtitle: Medium font slide sub title
+
+--- big-number: Large font big slide title
+title-font: large
+sub-title-font: large
+subtitle: Large font slide sub title
 
 --- blank: 
 
@@ -164,59 +290,6 @@ Press `esc` key to exit full screen view.
 
 
 
--- dark-presentation:
-
-
---- title-slide: Add slide1 title here
-subtitle: Add subtitle here
-
---- section-header: Add section header here
-
---- title-and-body: Add slide1 title here
-
-Add body here...
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-- sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-
---- title-and-2-columns: Add slide title here
-left-image: $assets.files.image-placeholder.png
-right-body: $right-body
-
---- title-only: Add slide title here
-image: $assets.files.image-placeholder.png
-
---- one-column-text: Add slide title here
-image: $assets.files.image-placeholder.png
-
-orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-nostrud exercitation ullamco laboris nisi ut orem ipsum dolor sit amet, 
-consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-laboris nisi ut orem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-
---- main-point: Add slide title here
-
---- section-title-and-description: Add slide title here
-subtitle: Add subtitle here
-image: $assets.files.image-placeholder.png
-
---- caption: Add caption here
-image: $assets.files.image-placeholder.png
-
--- container: page
-
--- ftd.column:
-margin-top: $fpm.space.space-5
-
--- tf.markdown:
-
-Click on `full-screen` mode `squre` icon to see full-screen view. On `full-screen`
-mode to navigate slides press `left` OR `right` arrow keys to move to left OR 
-right slide. 
-
-Press `esc` key to exit full screen view.
 
 
 
@@ -247,6 +320,8 @@ optional integer move-top:
 optional integer move-bottom:
 optional boolean move-center: true
 optional integer number:
+string title-font: regular
+string sub-title-font: regular
 if: $PARENT.current == $SIBLING-INDEX
 width: fill
 height: fill
@@ -267,14 +342,44 @@ spacing: 36
 max-width: 1200
 
 --- ftd.text: $title
-role: $fpm.type.heading-hero
+if: $title-font == regular
+role: $slides.title-regular
+color: $fpm.color.main.text-strong
+align: center
+text-align: center
+
+--- ftd.text: $title
+if: $title-font == medium
+role: $slides.title-medium
+color: $fpm.color.main.text-strong
+align: center
+text-align: center
+
+--- ftd.text: $title
+if: $title-font == large
+role: $slides.title-large
 color: $fpm.color.main.text-strong
 align: center
 text-align: center
 
 --- ftd.text:
+if: $sub-title-font == regular
 text: $subtitle
-role: $fpm.type.heading-medium
+role: $slides.sub-title-regular
+color: $fpm.color.main.text-strong
+align: center
+
+--- ftd.text:
+if: $sub-title-font == medium
+text: $subtitle
+role: $slides.sub-title-medium
+color: $fpm.color.main.text-strong
+align: center
+
+--- ftd.text:
+if: $sub-title-font == large
+text: $subtitle
+role: $slides.sub-title-large
 color: $fpm.color.main.text-strong
 align: center
 
@@ -292,7 +397,7 @@ caption title:
 optional integer move-top:
 optional integer move-bottom:
 boolean move-center: false
-optional string font-size:
+string title-font: regular
 optional integer number:
 if: $PARENT.current == $SIBLING-INDEX
 width: fill
@@ -314,9 +419,25 @@ align: center
 id: change
 
 --- ftd.text: $title
-role: $fpm.type.heading-hero
+if: $title-font == regular
+role: $slides.title-regular
 color: $fpm.color.main.text-strong
-width: fill
+align: center
+text-align: center
+
+--- ftd.text: $title
+if: $title-font == medium
+role: $slides.title-medium
+color: $fpm.color.main.text-strong
+align: center
+text-align: center
+
+--- ftd.text: $title
+if: $title-font == large
+role: $slides.title-large
+color: $fpm.color.main.text-strong
+align: center
+text-align: center
 
 
 
@@ -333,7 +454,8 @@ body body:
 optional integer move-top:
 optional integer move-bottom:
 boolean move-center: true
-string font-size: regular
+string title-font: regular
+string body-font: regular
 optional integer number:
 if: $PARENT.current == $SIBLING-INDEX
 width: fill
@@ -360,41 +482,42 @@ align: center
 spacing: 32
 
 --- ftd.text: $title
-role: $fpm.type.heading-hero
+if: $title-font == regular
+role: $slides.title-regular
 color: $fpm.color.main.text-strong
-width: fill
+
+--- ftd.text: $title
+if: $title-font == medium
+role: $slides.title-medium
+color: $fpm.color.main.text-strong
+
+--- ftd.text: $title
+if: $title-font == large
+role: $slides.title-large
+color: $fpm.color.main.text-strong
 
 --- ftd.text:
-if: $font-size == small
+if: $body-font == regular
 text: $body
-color: $fpm.color.main.text-strong
-margin-top if $move-top is not null: $move-top
-margin-bottom if $move-bottom is not null: $move-bottom
-width: fill
-role: $fpm.type.fine-print
-
---- ftd.text:
-if: $font-size == regular
-text: $body
-role: $fpm.type.copy-tight
-color: $fpm.color.main.text-strong
-margin-top if $move-top is not null: $move-top
-margin-bottom if $move-bottom is not null: $move-bottom
-width: fill
-
---- ftd.text:
-if: $font-size == medium
-text: $body
-role: $fpm.type.copy-large
+role: $slides.body-regular
 color: $fpm.color.main.text-strong
 margin-top if $move-top is not null: $move-top
 margin-bottom if $move-bottom is not null: $move-bottom
 width: fill
 
 --- ftd.text:
-if: $font-size == large
+if: $body-font == medium
 text: $body
-role: $fpm.type.label-big
+role: $slides.body-medium
+color: $fpm.color.main.text-strong
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+
+--- ftd.text:
+if: $body-font == large
+text: $body
+role: $slides.body-large
 color: $fpm.color.main.text-strong
 margin-top if $move-top is not null: $move-top
 margin-bottom if $move-bottom is not null: $move-bottom
@@ -415,7 +538,8 @@ caption title:
 optional integer move-top:
 optional integer move-bottom:
 boolean move-center: false
-string font-size: small
+string title-font: regular
+string body-font: regular
 optional integer number:
 optional body left-body:
 optional ftd.image-src left-image:
@@ -448,9 +572,19 @@ id: two-column
 max-width: 1200
 
 --- ftd.text: $title
-role: $fpm.type.heading-hero
+if: $title-font == regular
+role: $slides.title-regular
 color: $fpm.color.main.text-strong
-width: fill
+
+--- ftd.text: $title
+if: $title-font == medium
+role: $slides.title-medium
+color: $fpm.color.main.text-strong
+
+--- ftd.text: $title
+if: $title-font == large
+role: $slides.title-large
+color: $fpm.color.main.text-strong
 
 --- container: description
 
@@ -470,30 +604,23 @@ if: $left-body is not null
 width: fill
 
 --- ftd.text:
-if: $font-size == small
+if: $body-font == regular
 text: $left-body
-color: $fpm.color.main.text-strong
-width: fill
-role: $fpm.type.fine-print
-
---- ftd.text:
-if: $font-size == regular
-text: $left-body
-role: $fpm.type.copy-tight
+role: $slides.body-regular
 color: $fpm.color.main.text-strong
 width: fill
 
 --- ftd.text:
-if: $font-size == medium
+if: $body-font == medium
 text: $left-body
-role: $fpm.type.copy-large
+role: $slides.body-medium
 color: $fpm.color.main.text-strong
 width: fill
 
 --- ftd.text:
-if: $font-size == large
+if: $body-font == large
 text: $left-body
-role: $fpm.type.label-big
+role: $slides.body-large
 color: $fpm.color.main.text-strong
 width: fill
 
@@ -512,30 +639,23 @@ if: $right-body is not null
 width: fill
 
 --- ftd.text:
-if: $font-size == small
+if: $body-font == regular
 text: $right-body
-color: $fpm.color.main.text-strong
-width: fill
-role: $fpm.type.fine-print
-
---- ftd.text:
-if: $font-size == regular
-text: $right-body
-role: $fpm.type.copy-tight
+role: $slides.body-regular
 color: $fpm.color.main.text-strong
 width: fill
 
 --- ftd.text:
-if: $font-size == medium
+if: $body-font == medium
 text: $right-body
-role: $fpm.type.copy-large
+role: $slides.body-medium
 color: $fpm.color.main.text-strong
 width: fill
 
 --- ftd.text:
-if: $font-size == large
+if: $body-font == large
 text: $right-body
-role: $fpm.type.label-big
+role: $slides.body-large
 color: $fpm.color.main.text-strong
 width: fill
 
@@ -556,69 +676,14 @@ height: auto
 
 
 
--- ftd.column left-column:
-optional body body:
-optional ftd.image-src image-left: 
-width: fill
-margin-right: 36
-margin-bottom if $is-mobile: 24
-
---- ftd.text:
-if: $body is not null
-text: $body
-role: $fpm.type.copy-large
-color: $fpm.color.main.text-strong
-width: fill
-
---- ftd.image:
-if: $body is null
-src: $image-left
-width: fill
-height: auto
-
-
-
-
-
-
-
-
-
-
--- ftd.column right-column:
-optional body body:
-optional ftd.image-src image-right: 
-width: fill
-
---- ftd.text:
-if: $body is not null
-text: $body
-role: $fpm.type.copy-large
-color: $fpm.color.main.text-strong
-width: fill
-
---- ftd.image:
-if: $body is null
-src: $image-right
-width: fill
-height: auto
-
-
-
-
-
-
-
-
-
-
 -- ftd.column title-only:
 caption title:
 optional ftd.image-src image:
 optional integer move-top:
 optional integer move-bottom:
 boolean move-center: true
-optional string font-size:
+string title-font: regular
+string body-font: regular
 optional integer number:
 boolean center-image: false
 if: $PARENT.current == $SIBLING-INDEX
@@ -647,7 +712,22 @@ max-width: 1200
 max-width if $is-mobile: fill 
 
 --- ftd.text: $title
-role: $fpm.type.heading-hero
+if: $title-font == regular
+role: $slides.title-regular
+color: $fpm.color.main.text-strong
+width: fill
+margin-bottom: 24
+
+--- ftd.text: $title
+if: $title-font == medium
+role: $slides.title-medium
+color: $fpm.color.main.text-strong
+width: fill
+margin-bottom: 24
+
+--- ftd.text: $title
+if: $title-font == large
+role: $slides.title-large
 color: $fpm.color.main.text-strong
 width: fill
 margin-bottom: 24
@@ -685,7 +765,22 @@ max-width: 1200
 max-width if $is-mobile: fill 
 
 --- ftd.text: $title
-role: $fpm.type.heading-hero
+if: $title-font == regular
+role: $slides.title-regular
+color: $fpm.color.main.text-strong
+width: fill
+margin-bottom: 24
+
+--- ftd.text: $title
+if: $title-font == medium
+role: $slides.title-medium
+color: $fpm.color.main.text-strong
+width: fill
+margin-bottom: 24
+
+--- ftd.text: $title
+if: $title-font == large
+role: $slides.title-large
 color: $fpm.color.main.text-strong
 width: fill
 margin-bottom: 24
@@ -718,7 +813,8 @@ optional ftd.image-src image:
 optional integer move-top:
 optional integer move-bottom:
 boolean move-center: true
-optional string font-size: regular
+string title-font: regular
+string body-font: regular
 optional integer number:
 if: $PARENT.current == $SIBLING-INDEX
 width: fill
@@ -748,40 +844,42 @@ width: fill
 align: top
 
 --- ftd.text: $title
-role: $fpm.type.heading-hero
+if: $title-font == regular
+role: $slides.title-regular
+color: $fpm.color.main.text-strong
+
+--- ftd.text: $title
+if: $title-font == medium
+role: $slides.title-medium
+color: $fpm.color.main.text-strong
+
+--- ftd.text: $title
+if: $title-font == large
+role: $slides.title-large
 color: $fpm.color.main.text-strong
 
 --- ftd.text:
-if: $font-size == small
+if: $body-font == regular
 text: $body
-color: $fpm.color.main.text-strong
-margin-top if $move-top is not null: $move-top
-margin-bottom if $move-bottom is not null: $move-bottom
-width: fill
-role: $fpm.type.fine-print
-
---- ftd.text:
-if: $font-size == regular
-text: $body
-role: $fpm.type.copy-tight
-color: $fpm.color.main.text-strong
-margin-top if $move-top is not null: $move-top
-margin-bottom if $move-bottom is not null: $move-bottom
-width: fill
-
---- ftd.text:
-if: $font-size == medium
-text: $body
-role: $fpm.type.copy-large
+role: $slides.body-regular
 color: $fpm.color.main.text-strong
 margin-top if $move-top is not null: $move-top
 margin-bottom if $move-bottom is not null: $move-bottom
 width: fill
 
 --- ftd.text:
-if: $font-size == large
+if: $body-font == medium
 text: $body
-role: $fpm.type.label-big
+role: $slides.body-medium
+color: $fpm.color.main.text-strong
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+
+--- ftd.text:
+if: $body-font == large
+text: $body
+role: $slides.body-large
 color: $fpm.color.main.text-strong
 margin-top if $move-top is not null: $move-top
 margin-bottom if $move-bottom is not null: $move-bottom
@@ -813,7 +911,8 @@ caption title:
 optional integer move-top:
 optional integer move-bottom:
 boolean move-center: true
-optional string font-size:
+string title-font: regular
+string body-font: regular
 optional integer number: 
 if: $PARENT.current == $SIBLING-INDEX
 width: fill
@@ -832,7 +931,20 @@ align: center
 max-width: 1200
 
 --- ftd.text: $title
-role: $fpm.type.heading-hero
+if: $title-font == regular
+role: $slides.title-regular
+color: $fpm.color.main.text-strong
+width: fill
+
+--- ftd.text: $title
+if: $title-font == medium
+role: $slides.title-medium
+color: $fpm.color.main.text-strong
+width: fill
+
+--- ftd.text: $title
+if: $title-font == large
+role: $slides.title-large
 color: $fpm.color.main.text-strong
 width: fill
 
@@ -853,7 +965,9 @@ optional ftd.image-src image:
 optional integer move-top:
 optional integer move-bottom:
 boolean move-center: true
-optional string font-size:
+string title-font: regular
+string body-font: regular
+string sub-title-font: regular
 optional integer number:
 if: $PARENT.current == $SIBLING-INDEX
 width: fill
@@ -882,13 +996,43 @@ id: one-column
 max-width: 1200
 
 --- ftd.text: $title
-role: $fpm.type.heading-hero
+if: $title-font == regular
+role: $slides.title-regular
+color: $fpm.color.main.text-strong
+width: fill
+
+--- ftd.text: $title
+if: $title-font == medium
+role: $slides.title-medium
+color: $fpm.color.main.text-strong
+width: fill
+
+--- ftd.text: $title
+if: $title-font == large
+role: $slides.title-large
 color: $fpm.color.main.text-strong
 width: fill
 
 --- ftd.text:
+if: $sub-title-font == regular
 text: $subtitle
-role: $fpm.type.heading-medium
+role: $slides.sub-title-regular
+color: $fpm.color.main.text-strong
+width: fill
+margin-top: $fpm.space.space-6
+
+--- ftd.text:
+if: $sub-title-font == medium
+text: $subtitle
+role: $slides.sub-title-medium
+color: $fpm.color.main.text-strong
+width: fill
+margin-top: $fpm.space.space-6
+
+--- ftd.text:
+if: $sub-title-font == large
+text: $subtitle
+role: $slides.sub-title-large
 color: $fpm.color.main.text-strong
 width: fill
 margin-top: $fpm.space.space-6
@@ -904,36 +1048,27 @@ id: left-container
 if: $body is not null
 
 --- ftd.text:
-if: $font-size == small
+if: $body-font == regular
 text: $body
-color: $fpm.color.main.text-strong
-margin-top if $move-top is not null: $move-top
-margin-bottom if $move-bottom is not null: $move-bottom
-width: fill
-role: $fpm.type.fine-print
-
---- ftd.text:
-if: $font-size == regular
-text: $body
-role: $fpm.type.copy-tight
+role: $slides.body-regular
 color: $fpm.color.main.text-strong
 margin-top if $move-top is not null: $move-top
 margin-bottom if $move-bottom is not null: $move-bottom
 width: fill
 
 --- ftd.text:
-if: $font-size == medium
+if: $body-font == medium
 text: $body
-role: $fpm.type.copy-large
+role: $slides.body-medium
 color: $fpm.color.main.text-strong
 margin-top if $move-top is not null: $move-top
 margin-bottom if $move-bottom is not null: $move-bottom
 width: fill
 
 --- ftd.text:
-if: $font-size == large
+if: $body-font == large
 text: $body
-role: $fpm.type.label-big
+role: $slides.body-large
 color: $fpm.color.main.text-strong
 margin-top if $move-top is not null: $move-top
 margin-bottom if $move-bottom is not null: $move-bottom
@@ -964,7 +1099,7 @@ height: fill
 optional integer move-top:
 optional integer move-bottom:
 boolean move-center: true
-optional string font-size:
+string body-font: regular
 optional integer number:
 if: $PARENT.current == $SIBLING-INDEX
 
@@ -1014,7 +1149,24 @@ height: auto
 --- container: image-container
 
 --- ftd.text: $title
-role: $fpm.type.copy-large
+if: $body-font == regular
+role: $slides.body-regular
+color: $fpm.color.main.text-strong
+width: fill
+height: fill
+margin-top: 24
+
+--- ftd.text: $title
+if: $body-font == medium
+role: $slides.body-medium
+color: $fpm.color.main.text-strong
+width: fill
+height: fill
+margin-top: 24
+
+--- ftd.text: $title
+if: $body-font == large
+role: $slides.body-large
 color: $fpm.color.main.text-strong
 width: fill
 height: fill
@@ -1040,7 +1192,26 @@ align: center
 max-width: 1200
 
 --- ftd.text: $title
-role: $fpm.type.copy-large
+if: $body-font == regular
+role: $slides.body-regular
+color: $fpm.color.main.text-strong
+width: fill
+height: fill
+align: center
+margin-bottom: 36
+
+--- ftd.text: $title
+if: $body-font == medium
+role: $slides.body-medium
+color: $fpm.color.main.text-strong
+width: fill
+height: fill
+align: center
+margin-bottom: 36
+
+--- ftd.text: $title
+if: $body-font == large
+role: $slides.body-large
 color: $fpm.color.main.text-strong
 width: fill
 height: fill
@@ -1062,7 +1233,8 @@ string subtitle:
 optional integer move-top:
 optional integer move-bottom:
 boolean move-center: true
-optional string font-size:
+string title-font: regular
+string sub-title-font: regular
 optional integer number:
 if: $PARENT.current == $SIBLING-INDEX
 width: fill
@@ -1086,17 +1258,46 @@ spacing: 36
 max-width: 1200
 
 --- ftd.text: $title
-role: $fpm.type.heading-hero
+if: $title-font == regular
+role: $slides.title-regular
+color: $fpm.color.main.text-strong
+align: center
+text-align: center
+
+--- ftd.text: $title
+if: $title-font == medium
+role: $slides.title-medium
+color: $fpm.color.main.text-strong
+align: center
+text-align: center
+
+--- ftd.text: $title
+if: $title-font == large
+role: $slides.title-large
 color: $fpm.color.main.text-strong
 align: center
 text-align: center
 
 --- ftd.text:
+if: $sub-title-font == regular
 text: $subtitle
-role: $fpm.type.heading-medium
+role: $slides.sub-title-regular
 color: $fpm.color.main.text-strong
 align: center
-text-align: center
+
+--- ftd.text:
+if: $sub-title-font == medium
+text: $subtitle
+role: $slides.sub-title-medium
+color: $fpm.color.main.text-strong
+align: center
+
+--- ftd.text:
+if: $sub-title-font == large
+text: $subtitle
+role: $slides.sub-title-large
+color: $fpm.color.main.text-strong
+align: center
 
 
 
