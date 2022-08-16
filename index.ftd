@@ -190,6 +190,14 @@ Regular size font body here...
 
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
+--- one-column-text: Slide title with regular font
+title-font: regular
+body-font: regular
+
+Regular size font body here...
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
 --- one-column-text: Slide title with medium font
 title-font: medium
 body-font:  medium
@@ -199,10 +207,24 @@ Medium size font body here...
 
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
+--- one-column-text: Slide title with medium font
+title-font: medium
+body-font:  medium
+
+Medium size font body here...
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
 --- one-column-text: Slide title with large font
 title-font: large
 body-font:  large
 image: $assets.files.image-placeholder.png
+
+Large size font body here...
+
+--- one-column-text: Slide title with large font
+title-font: large
+body-font:  large
 
 Large size font body here...
 
@@ -453,7 +475,7 @@ caption title:
 body body:
 optional integer move-top:
 optional integer move-bottom:
-boolean move-center: true
+boolean move-center: false
 string title-font: regular
 string body-font: regular
 optional integer number:
@@ -468,8 +490,8 @@ width: fill
 --- ftd.column:
 width: fill
 id: description
-padding-top: 36
-align: center
+padding-top if not $move-center: 36
+align if $move-center: center
 
 --- ftd.column:
 width: fill
@@ -478,7 +500,7 @@ spacing: 36
 max-width: 1200
 
 --- ftd.column:
-align: center
+align: top
 spacing: 32
 
 --- ftd.text: $title
@@ -555,8 +577,8 @@ width: fill
 
 --- ftd.column:
 width: fill
-padding-top if not $move-center: 24
-align: center
+padding-top if not $move-center: 36
+align if $move-center: center
 
 --- ftd.column:
 width: fill
@@ -681,7 +703,7 @@ caption title:
 optional ftd.image-src image:
 optional integer move-top:
 optional integer move-bottom:
-boolean move-center: true
+boolean move-center: false
 string title-font: regular
 string body-font: regular
 optional integer number:
@@ -695,12 +717,11 @@ if: not $is-mobile
 id: main
 height: fill
 width: fill
-padding-top if $PARENT.show-full-screen: $fpm.space.space-6
-margin-top if not $PARENT.show-full-screen: -24
+margin-top if not $PARENT.show-full-screen: -64
 
 --- ftd.column:
 width: fill
-padding-top if not $move-center: 24
+padding-top if not $move-center: 36
 align if $move-center: center
 id: description
 
@@ -716,6 +737,7 @@ if: $title-font == regular
 role: $slides.title-regular
 color: $fpm.color.main.text-strong
 width: fill
+white-space: nowrap
 margin-bottom: 24
 
 --- ftd.text: $title
@@ -723,6 +745,7 @@ if: $title-font == medium
 role: $slides.title-medium
 color: $fpm.color.main.text-strong
 width: fill
+white-space: nowrap
 margin-bottom: 24
 
 --- ftd.text: $title
@@ -730,6 +753,7 @@ if: $title-font == large
 role: $slides.title-large
 color: $fpm.color.main.text-strong
 width: fill
+white-space: nowrap
 margin-bottom: 24
 
 --- ftd.image:
@@ -739,7 +763,7 @@ width: auto
 align if $center-image: center
 max-width: auto
 height: auto
-max-height if not $is-mobile: 400
+max-height if not $is-mobile: 360
 max-height if $is-mobile: 320
 margin-top if $move-top is not null: $move-top
 margin-bottom if $move-bottom is not null: $move-bottom
@@ -812,7 +836,7 @@ body body:
 optional ftd.image-src image:
 optional integer move-top:
 optional integer move-bottom:
-boolean move-center: true
+boolean move-center: false
 string title-font: regular
 string body-font: regular
 optional integer number:
@@ -827,10 +851,12 @@ width: fill
 
 --- ftd.column:
 width: fill
-padding-top if not $move-center: 24
+padding-top if not $move-center: 36
 align if $move-center: center
+id: change
 
---- ftd.row:
+--- ftd.column:
+if: $image is null
 height: fill
 width: fill
 id: description
@@ -842,6 +868,69 @@ max-width: 1200
 height: fill
 width: fill
 align: top
+spacing: 32
+
+--- ftd.text: $title
+if: $title-font == regular
+role: $slides.title-regular
+color: $fpm.color.main.text-strong
+
+--- ftd.text: $title
+if: $title-font == medium
+role: $slides.title-medium
+color: $fpm.color.main.text-strong
+
+--- ftd.text: $title
+if: $title-font == large
+role: $slides.title-large
+color: $fpm.color.main.text-strong
+
+--- ftd.text:
+if: $body-font == regular
+text: $body
+role: $slides.body-regular
+color: $fpm.color.main.text-strong
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+
+--- ftd.text:
+if: $body-font == medium
+text: $body
+role: $slides.body-medium
+color: $fpm.color.main.text-strong
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+
+--- ftd.text:
+if: $body-font == large
+text: $body
+role: $slides.body-large
+color: $fpm.color.main.text-strong
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+
+--- container: change
+
+
+
+
+--- ftd.row:
+if: $image is not null
+height: fill
+width: fill
+id: description
+align: center
+spacing: 36
+max-width: 1200
+
+--- ftd.column:
+height: fill
+width: fill
+align: top
+spacing: 32
 
 --- ftd.text: $title
 if: $title-font == regular
@@ -892,13 +981,9 @@ width: fill
 align: center
 
 --- ftd.image:
-if: $image is not null
 src: $image
 width: fill
 height: fill
-
-
-
 
 
 
@@ -923,7 +1008,7 @@ padding-horizontal if $is-mobile: $fpm.space.space-4
 width: fill
 id: description
 align if $move-center: center
-padding-top if not $move-center: 64
+padding-top if not $move-center: 36
 
 --- ftd.column:
 width: fill
@@ -934,6 +1019,7 @@ max-width: 1200
 if: $title-font == regular
 role: $slides.title-regular
 color: $fpm.color.main.text-strong
+white-space: nowrap
 width: fill
 
 --- ftd.text: $title
@@ -1041,7 +1127,6 @@ margin-top: $fpm.space.space-6
 
 --- ftd.column:
 width: fill
-align: center
 id: left-container
 
 --- ftd.row:
