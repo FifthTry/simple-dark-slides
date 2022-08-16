@@ -95,10 +95,7 @@ subtitle: Add subtitle here
 
 
 
--- slides.presentation:
-bg-color: $fpm.color.main.background.step-1
-overlay-bg-color: $fpm.color.main.text-strong
-show-full-screen: false
+-- dark-presentation:
 
 --- title-slide: Add slide 2 title here
 subtitle: Add subtitle here
@@ -167,10 +164,8 @@ Press `esc` key to exit full screen view.
 
 
 
--- slides.presentation:
-bg-color: $fpm.color.main.background.step-1
-overlay-bg-color: $fpm.color.main.text-strong
-show-full-screen: false
+-- dark-presentation:
+
 
 --- title-slide: Add slide1 title here
 subtitle: Add subtitle here
@@ -222,6 +217,19 @@ mode to navigate slides press `left` OR `right` arrow keys to move to left OR
 right slide. 
 
 Press `esc` key to exit full screen view.
+
+
+
+
+
+
+
+
+
+
+-- slides.presentation dark-presentation:
+overlay-bg-color: $fpm.color.main.text-strong
+show-full-screen: false
 
 
 
