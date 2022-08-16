@@ -145,8 +145,7 @@ Large font size of body content
 --- title-and-2-columns: Regular title of 2 columns slide
 title-font: regular
 body-font: regular
-left-image: $assets.files.image-placeholder.png
-right-body: 
+image: $assets.files.image-placeholder.png
 
 Regular size font body here...
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -154,8 +153,7 @@ Regular size font body here...
 --- title-and-2-columns: Medium title of 2 columns slide
 title-font: medium
 body-font: medium
-left-image: $assets.files.image-placeholder.png
-right-body: 
+image: $assets.files.image-placeholder.png
 
 Medium size font body here...
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -163,8 +161,8 @@ Medium size font body here...
 --- title-and-2-columns: Large title of 2 columns slide
 title-font: large
 body-font: large
-left-image: $assets.files.image-placeholder.png
-right-body: 
+left-body: true
+image: $assets.files.image-placeholder.png
 
 Large size font body here...
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -325,7 +323,7 @@ Press `esc` key to exit full screen view.
 -- slides.presentation dark-presentation:
 overlay-bg-color: $fpm.color.main.text-strong
 show-full-screen: false
-
+bg-color: $fpm.color.main.background.step-1
 
 
 
@@ -490,7 +488,7 @@ width: fill
 --- ftd.column:
 width: fill
 id: description
-padding-top if not $move-center: 36
+padding-top if $PARENT.show-full-screen: 36
 align if $move-center: center
 
 --- ftd.column:
@@ -563,10 +561,9 @@ boolean move-center: false
 string title-font: regular
 string body-font: regular
 optional integer number:
-optional body left-body:
-optional ftd.image-src left-image:
-optional body right-body:
-optional ftd.image-src right-image:  
+optional ftd.image-src image:
+optional body body:
+boolean left-body: false
 if: $PARENT.current == $SIBLING-INDEX
 width: fill
 height: fill
@@ -577,7 +574,7 @@ width: fill
 
 --- ftd.column:
 width: fill
-padding-top if not $move-center: 36
+padding-top if $PARENT.show-full-screen: 36
 align if $move-center: center
 
 --- ftd.column:
@@ -611,37 +608,33 @@ color: $fpm.color.main.text-strong
 --- container: description
 
 --- ftd.row: 
-id: text-contain
+if: $left-body 
 width: fill
 margin-top if $move-top is not null: $move-top
 margin-bottom if $move-bottom is not null: $move-bottom
 spacing: 36
-
---- ftd.column:
-width: fill
 id: left
 
---- ftd.row:
-if: $left-body is not null
+--- ftd.column:
 width: fill
 
 --- ftd.text:
 if: $body-font == regular
-text: $left-body
+text: $body
 role: $slides.body-regular
 color: $fpm.color.main.text-strong
 width: fill
 
 --- ftd.text:
 if: $body-font == medium
-text: $left-body
+text: $body
 role: $slides.body-medium
 color: $fpm.color.main.text-strong
 width: fill
 
 --- ftd.text:
 if: $body-font == large
-text: $left-body
+text: $body
 role: $slides.body-large
 color: $fpm.color.main.text-strong
 width: fill
@@ -649,50 +642,57 @@ width: fill
 --- container: left
 
 --- ftd.image:
-if: $left-body is null
-src: $left-image
+src: $image
 width: fill
 height: auto
+max-height if not $is-mobile: 360
+max-height if $is-mobile: 320
 
---- container: text-contain
+--- container: description
+
+--- ftd.row: 
+id: right
+if: not $left-body 
+width: fill
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+spacing: 36
+
+--- ftd.column:
+width: fill
+
+--- ftd.image:
+src: $image
+width: fill
+height: auto
+max-height if not $is-mobile: 360
+max-height if $is-mobile: 320
+
+--- container: right
 
 --- ftd.row:
-if: $right-body is not null
 width: fill
 
 --- ftd.text:
 if: $body-font == regular
-text: $right-body
+text: $body
 role: $slides.body-regular
 color: $fpm.color.main.text-strong
 width: fill
 
 --- ftd.text:
 if: $body-font == medium
-text: $right-body
+text: $body
 role: $slides.body-medium
 color: $fpm.color.main.text-strong
 width: fill
 
 --- ftd.text:
 if: $body-font == large
-text: $right-body
+text: $body
 role: $slides.body-large
 color: $fpm.color.main.text-strong
 width: fill
-
---- container: ftd.main
-
---- ftd.image:
-if: $right-body is null
-src: $right-image
-width: fill
-height: auto
-
-
-
-
-
 
 
 
@@ -721,7 +721,7 @@ margin-top if not $PARENT.show-full-screen: -64
 
 --- ftd.column:
 width: fill
-padding-top if not $move-center: 36
+padding-top if : 36
 align if $move-center: center
 id: description
 
@@ -851,7 +851,7 @@ width: fill
 
 --- ftd.column:
 width: fill
-padding-top if not $move-center: 36
+padding-top if $PARENT.show-full-screen: 36
 align if $move-center: center
 id: change
 
@@ -874,16 +874,19 @@ spacing: 32
 if: $title-font == regular
 role: $slides.title-regular
 color: $fpm.color.main.text-strong
+width: fill
 
 --- ftd.text: $title
 if: $title-font == medium
 role: $slides.title-medium
 color: $fpm.color.main.text-strong
+width: fill
 
 --- ftd.text: $title
 if: $title-font == large
 role: $slides.title-large
 color: $fpm.color.main.text-strong
+width: fill
 
 --- ftd.text:
 if: $body-font == regular
@@ -1008,7 +1011,7 @@ padding-horizontal if $is-mobile: $fpm.space.space-4
 width: fill
 id: description
 align if $move-center: center
-padding-top if not $move-center: 36
+padding-top if $PARENT.show-full-screen: 36
 
 --- ftd.column:
 width: fill
