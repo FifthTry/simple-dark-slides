@@ -349,6 +349,7 @@ height: fill
 --- ftd.row:
 height: fill
 width: fill
+margin-top if not $PARENT.show-full-screen: 132
 
 --- ftd.column:
 width: fill
@@ -412,7 +413,7 @@ align: center
 
 
 
--- ftd.row section-header:
+-- ftd.column section-header:
 caption title:
 optional integer move-top:
 optional integer move-bottom:
@@ -422,6 +423,11 @@ optional integer number:
 if: $PARENT.current == $SIBLING-INDEX
 width: fill
 height: fill
+
+--- ftd.row:
+width: fill
+height: fill
+margin-top if not $PARENT.show-full-screen: 132
 
 --- ftd.column:
 width: fill
@@ -484,11 +490,12 @@ height: fill
 --- ftd.row:
 height: fill
 width: fill
+margin-top if not $PARENT.show-full-screen: -64
 
 --- ftd.column:
 width: fill
 id: description
-padding-top if $PARENT.show-full-screen: 36
+padding-top if $PARENT.show-full-screen: 24
 align if $move-center: center
 
 --- ftd.column:
@@ -500,6 +507,7 @@ max-width: 1200
 --- ftd.column:
 align: top
 spacing: 32
+width: fill
 
 --- ftd.text: $title
 if: $title-font == regular
@@ -571,10 +579,11 @@ height: fill
 --- ftd.row:
 height: fill
 width: fill
+margin-top if not $PARENT.show-full-screen: -64
 
 --- ftd.column:
 width: fill
-padding-top if $PARENT.show-full-screen: 36
+padding-top if $PARENT.show-full-screen: 24
 align if $move-center: center
 
 --- ftd.column:
@@ -721,7 +730,6 @@ margin-top if not $PARENT.show-full-screen: -64
 
 --- ftd.column:
 width: fill
-padding-top if : 36
 align if $move-center: center
 id: description
 
@@ -778,7 +786,7 @@ width: fill
 
 --- ftd.column:
 width: fill
-padding-top if $PARENT.show-full-screen: 36
+padding-top if $PARENT.show-full-screen: 24
 id: description
 
 --- ftd.column:
@@ -848,10 +856,11 @@ padding-horizontal if $is-mobile: $fpm.space.space-4
 --- ftd.row:
 height: fill
 width: fill
+margin-top if not $PARENT.show-full-screen: -64
 
 --- ftd.column:
 width: fill
-padding-top if $PARENT.show-full-screen: 36
+padding-top if $PARENT.show-full-screen: 24
 align if $move-center: center
 id: change
 
@@ -994,7 +1003,7 @@ height: fill
 
 
 
--- ftd.row main-point:
+-- ftd.column main-point:
 caption title:
 optional integer move-top:
 optional integer move-bottom:
@@ -1007,11 +1016,16 @@ width: fill
 height: fill
 padding-horizontal if $is-mobile: $fpm.space.space-4
 
+--- ftd.row:
+width: fill
+height: fill
+margin-top if not $PARENT.show-full-screen: 132
+
 --- ftd.column:
 width: fill
 id: description
 align if $move-center: center
-padding-top if $PARENT.show-full-screen: 36
+padding-top if $PARENT.show-full-screen: 24
 
 --- ftd.column:
 width: fill
@@ -1065,11 +1079,12 @@ height: fill
 --- ftd.row:
 height: fill
 width: fill
+margin-top if not $PARENT.show-full-screen: -64
 
 --- ftd.column:
 width: fill
 align if $move-center: center
-padding-top if not $move-center: 64
+padding-top if $PARENT.show-full-screen: 24
 
 --- ftd.row:
 width: fill
@@ -1200,7 +1215,7 @@ id: main
 if: $image is not null
 id: description
 align if $move-center: center
-padding-top if not $move-center: 64
+padding-top if $PARENT.show-full-screen: 24
 width: fill
 
 --- ftd.column:
@@ -1332,12 +1347,13 @@ padding-horizontal if $is-mobile: $fpm.space.space-4
 --- ftd.row:
 height: fill
 width: fill
+margin-top if not $PARENT.show-full-screen: 132
 
 --- ftd.column:
 width: fill
 id: description
 align if $move-center: center
-padding-top if not $move-center: 64
+padding-top if $PARENT.show-full-screen: 24
 
 --- ftd.column:
 width: fill
