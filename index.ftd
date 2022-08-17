@@ -350,6 +350,7 @@ height: fill
 height: fill
 width: fill
 margin-top if not $PARENT.show-full-screen: 132
+margin-top if $is-mobile: 98
 
 --- ftd.column:
 width: fill
