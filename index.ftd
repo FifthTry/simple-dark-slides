@@ -679,31 +679,34 @@ width: fill
 
 --- container: left
 
+--- ftd.column:
+width: fill
+
 --- ftd.image:
 src: $image
-width: fill
+width: auto
 height: auto
-max-height if not $is-mobile: 360
+max-width: fit-content
 max-height if $is-mobile: 320
 
 --- container: description
 
 --- ftd.row: 
-id: right
 if: not $left-body 
 width: fill
 margin-top if $move-top is not null: $move-top
 margin-bottom if $move-bottom is not null: $move-bottom
 spacing: 36
+id: right
 
 --- ftd.column:
 width: fill
 
 --- ftd.image:
 src: $image
-width: fill
+width: auto
 height: auto
-max-height if not $is-mobile: 360
+max-width: fit-content
 max-height if $is-mobile: 320
 
 --- container: right
@@ -794,14 +797,12 @@ width: fill
 white-space: nowrap
 margin-bottom: 24
 
+
 --- ftd.image:
 if: $image is not null
 src: $image
-width: auto
 align if $center-image: center
-max-width: auto
-height: auto
-max-height if not $is-mobile: 360
+max-width: 600
 max-height if $is-mobile: 320
 margin-top if $move-top is not null: $move-top
 margin-bottom if $move-bottom is not null: $move-bottom
@@ -1023,8 +1024,8 @@ align: center
 
 --- ftd.image:
 src: $image
-width: fill
-height: fill
+width: auto
+height: auto
 
 
 
@@ -1210,7 +1211,7 @@ width: fill
 --- ftd.image:
 if: $body is null
 src: $image
-width: fill
+width: auto
 height: fill
 
 
@@ -1245,7 +1246,7 @@ id: description
 align if $move-center: center
 padding-vertical if $PARENT.show-full-screen: 48
 padding-horizontal if $PARENT.show-full-screen: 48
-width: fill
+width: auto
 
 --- ftd.column:
 width: fill
@@ -1262,7 +1263,7 @@ max-width: 740
 --- ftd.image:
 if: not $is-mobile
 src: $image
-width: fill
+width: auto
 max-width if not $PARENT.show-full-screen: 600
 max-width if $PARENT.show-full-screen: 800
 max-width if $is-mobile: 600
@@ -1273,7 +1274,7 @@ height: auto
 --- ftd.image:
 if: $is-mobile
 src: $image
-width: fill
+width: auto
 max-width: 600
 height: auto
 
