@@ -383,22 +383,7 @@ width: fill
 margin-top if not $PARENT.show-full-screen: 132
 margin-top if $is-mobile: 98
 
---- ftd.column:
-width: fill
-id: description
-align: center
 
---- ftd.column:
-width: fill
-align: center
-spacing: 36
-
---- ftd.text: $title
-if: $title-font == regular
-role: $slides.title-regular
-color: $fpm.color.main.text-strong
-align: center
-text-align: center
 
 --- ftd.text: $title
 if: $title-font == medium
