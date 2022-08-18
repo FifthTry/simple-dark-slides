@@ -284,8 +284,27 @@ title-font: large
 sub-title-font: large
 subtitle: Large font slide sub title
 
+--- centered: Centered slide with regular font 
+title-font: regular
+sub-title-font: regular
+subtitle: Large font slide sub title
+image: $assets.files.image-placeholder.png
 
---- centered: Centered slide with regular font title
+Click on `full-screen` mode `squre` icon to see full-screen view. On `full-screen`
+mode to navigate slides press `left` OR `right` arrow keys to move to left OR 
+right slide.
+
+--- centered: Centered slide with medium font 
+title-font: medium
+sub-title-font: medium
+subtitle: Large font slide sub title
+image: $assets.files.image-placeholder.png
+
+Click on `full-screen` mode `squre` icon to see full-screen view. On `full-screen`
+mode to navigate slides press `left` OR `right` arrow keys to move to left OR 
+right slide.
+
+--- centered: Centered slide with large font 
 title-font: large
 sub-title-font: large
 subtitle: Large font slide sub title
@@ -1419,7 +1438,7 @@ align: center
 
 
 
--- ftd.column centered:
+-- ftd.row centered:
 caption title:
 string subtitle:
 string body-font: regular
@@ -1436,26 +1455,24 @@ width: fill
 height: fill
 padding-horizontal if $is-mobile: $fpm.space.space-4
 
---- ftd.column:
-if: not $PARENT.show-full-screen
-margin-top: -80
-
 --- ftd.row:
+if: not $PARENT.show-full-screen
 height: fill
 width: fill
-margin-top if not $PARENT.show-full-screen: 132
+margin-top: 80
+
+--- ftd.column:
+width: fill
+padding-vertical if $PARENT.show-full-screen: 48
+padding-horizontal if $PARENT.show-full-screen: 48
+align if $move-center: center
 
 --- ftd.column:
 width: fill
 id: description
-align if $move-center: center
-padding-vertical if $PARENT.show-full-screen: 48
-padding-horizontal if $PARENT.show-full-screen: 48
-
---- ftd.column:
-width: fill
-align: center
 spacing: 36
+align: center
+
 
 --- ftd.text: $title
 if: $title-font == regular
@@ -1540,21 +1557,25 @@ align: center
 
 --- container: ftd.main
 
---- ftd.column:
+--- ftd.row:
 if: $PARENT.show-full-screen
+height: fill
 width: fill
+
+
+--- ftd.column:
+width: fill
+padding-vertical if $PARENT.show-full-screen: 48
+padding-horizontal if $PARENT.show-full-screen: 48
+align if $move-center: center
 
 --- ftd.column:
 width: fill
 id: description
-align if $move-center: center
-padding-vertical if $PARENT.show-full-screen: 48
-padding-horizontal if $PARENT.show-full-screen: 48
-
---- ftd.column:
-width: fill
-align: center
 spacing: 36
+align: center
+
+
 
 --- ftd.text: $title
 if: $title-font == regular
