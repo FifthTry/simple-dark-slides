@@ -284,6 +284,18 @@ title-font: large
 sub-title-font: large
 subtitle: Large font slide sub title
 
+
+--- centered: Centered slide with regular font title
+title-font: large
+sub-title-font: large
+subtitle: Large font slide sub title
+image: $assets.files.image-placeholder.png
+
+Click on `full-screen` mode `squre` icon to see full-screen view. On `full-screen`
+mode to navigate slides press `left` OR `right` arrow keys to move to left OR 
+right slide. 
+
+
 --- blank: 
 
 -- container: page
@@ -323,7 +335,7 @@ Press `esc` key to exit full screen view.
 -- slides.presentation dark-presentation:
 overlay-bg-color: $fpm.color.main.text-strong
 show-full-screen: false
-bg-color: $fpm.color.main.background.step-1
+bg-color: $fpm.color.main.background.base
 
 
 
@@ -728,6 +740,8 @@ margin-top if not $PARENT.show-full-screen: -64
 
 --- ftd.column:
 width: fill
+padding-vertical if $PARENT.show-full-screen: 48
+padding-horizontal if $PARENT.show-full-screen: 48
 align if $move-center: center
 id: description
 
@@ -1398,6 +1412,230 @@ align: center
 
 
 
+
+
+
+
+
+
+
+-- ftd.column centered:
+caption title:
+string subtitle:
+string body-font: regular
+optional integer move-top:
+optional integer move-bottom:
+optional body body:
+optional ftd.image-src image:
+boolean move-center: true
+string title-font: regular
+string sub-title-font: regular
+optional integer number:
+if: $PARENT.current == $SIBLING-INDEX
+width: fill
+height: fill
+padding-horizontal if $is-mobile: $fpm.space.space-4
+
+--- ftd.column:
+if: not $PARENT.show-full-screen
+margin-top: -80
+
+--- ftd.row:
+height: fill
+width: fill
+margin-top if not $PARENT.show-full-screen: 132
+
+--- ftd.column:
+width: fill
+id: description
+align if $move-center: center
+padding-vertical if $PARENT.show-full-screen: 48
+padding-horizontal if $PARENT.show-full-screen: 48
+
+--- ftd.column:
+width: fill
+align: center
+spacing: 36
+
+--- ftd.text: $title
+if: $title-font == regular
+role: $slides.title-regular
+color: $fpm.color.main.text-strong
+align: center
+text-align: center
+
+--- ftd.text: $title
+if: $title-font == medium
+role: $slides.title-medium
+color: $fpm.color.main.text-strong
+align: center
+text-align: center
+
+--- ftd.text: $title
+if: $title-font == large
+role: $slides.title-large
+color: $fpm.color.main.text-strong
+align: center
+text-align: center
+
+--- ftd.text:
+if: $sub-title-font == regular
+text: $subtitle
+role: $slides.sub-title-regular
+color: $fpm.color.main.text-strong
+align: center
+
+--- ftd.text:
+if: $sub-title-font == medium
+text: $subtitle
+role: $slides.sub-title-medium
+color: $fpm.color.main.text-strong
+align: center
+
+--- ftd.text:
+if: $sub-title-font == large
+text: $subtitle
+role: $slides.sub-title-large
+color: $fpm.color.main.text-strong
+align: center
+
+--- ftd.text:
+if: $body-font == regular
+text: $body
+role: $slides.body-regular
+color: $fpm.color.main.text-strong
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: 800
+align: center
+
+--- ftd.text:
+if: $body-font == medium
+text: $body
+role: $slides.body-medium
+color: $fpm.color.main.text-strong
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: 800
+align: center
+
+--- ftd.text:
+if: $body-font == large
+text: $body
+role: $slides.body-large
+color: $fpm.color.main.text-strong
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: 800
+align: center
+
+--- ftd.image:
+if: $body is null
+src: $image
+width: auto
+height: auto
+max-height if not $is-mobile: 360
+max-height if $is-mobile: 320
+align: center
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $PARENT.show-full-screen
+width: fill
+
+--- ftd.column:
+width: fill
+id: description
+align if $move-center: center
+padding-vertical if $PARENT.show-full-screen: 48
+padding-horizontal if $PARENT.show-full-screen: 48
+
+--- ftd.column:
+width: fill
+align: center
+spacing: 36
+
+--- ftd.text: $title
+if: $title-font == regular
+role: $slides.title-regular
+color: $fpm.color.main.text-strong
+align: center
+text-align: center
+
+--- ftd.text: $title
+if: $title-font == medium
+role: $slides.title-medium
+color: $fpm.color.main.text-strong
+align: center
+text-align: center
+
+--- ftd.text: $title
+if: $title-font == large
+role: $slides.title-large
+color: $fpm.color.main.text-strong
+align: center
+text-align: center
+
+--- ftd.text:
+if: $sub-title-font == regular
+text: $subtitle
+role: $slides.sub-title-regular
+color: $fpm.color.main.text-strong
+align: center
+
+--- ftd.text:
+if: $sub-title-font == medium
+text: $subtitle
+role: $slides.sub-title-medium
+color: $fpm.color.main.text-strong
+align: center
+
+--- ftd.text:
+if: $sub-title-font == large
+text: $subtitle
+role: $slides.sub-title-large
+color: $fpm.color.main.text-strong
+align: center
+
+--- ftd.text:
+if: $body-font == regular
+text: $body
+role: $slides.body-regular
+color: $fpm.color.main.text-strong
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: 800
+align: center
+
+--- ftd.text:
+if: $body-font == medium
+text: $body
+role: $slides.body-medium
+color: $fpm.color.main.text-strong
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: 800
+align: center
+
+--- ftd.text:
+if: $body-font == large
+text: $body
+role: $slides.body-large
+color: $fpm.color.main.text-strong
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: 800
+align: center
+
+--- ftd.image:
+if: $body is null
+src: $image
+width: auto
+height: auto
+max-height if not $is-mobile: 360
+max-height if $is-mobile: 320
+align: center
 
 
 
