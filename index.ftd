@@ -100,17 +100,17 @@ subtitle: Add subtitle here
 --- title-slide: Regular font title of presentation
 title-font: regular
 sub-title-font: regular
-subtitle: Regular font sub title
+subtitle: Regular font sub-title
 
 --- title-slide: Medium font title of presentation
 title-font: medium
 sub-title-font: medium
-subtitle: Medium font sub title
+subtitle: Medium font sub-title
 
 --- title-slide: Large font title of presentation
 title-font: large
 sub-title-font: large
-subtitle: Large font sub title
+subtitle: Large font sub-title
 
 --- section-header: Section header with regular font
 title-font: regular
