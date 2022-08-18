@@ -361,7 +361,6 @@ align: center
 width: fill
 align: center
 spacing: 36
-max-width: 1200
 
 --- ftd.text: $title
 if: $title-font == regular
@@ -439,7 +438,6 @@ z-index: 1000
 --- ftd.column:
 width: fill
 align: center
-max-width: 1200
 
 --- ftd.column:
 align: center
@@ -496,14 +494,14 @@ margin-top if not $PARENT.show-full-screen: -64
 --- ftd.column:
 width: fill
 id: description
-padding-top if $PARENT.show-full-screen: 24
+padding-vertical if $PARENT.show-full-screen: 48
+padding-horizontal if $PARENT.show-full-screen: 48
 align if $move-center: center
 
 --- ftd.column:
 width: fill
 align: center
 spacing: 36
-max-width: 1200
 
 --- ftd.column:
 align: top
@@ -584,7 +582,8 @@ margin-top if not $PARENT.show-full-screen: -64
 
 --- ftd.column:
 width: fill
-padding-top if $PARENT.show-full-screen: 24
+padding-vertical if $PARENT.show-full-screen: 48
+padding-horizontal if $PARENT.show-full-screen: 48
 align if $move-center: center
 
 --- ftd.column:
@@ -592,13 +591,11 @@ width: fill
 id: description
 spacing: 36
 align: center
-max-width: 1200
 
 --- ftd.column:
 width: fill
 align: center
 id: two-column
-max-width: 1200
 
 --- ftd.text: $title
 if: $title-font == regular
@@ -737,8 +734,7 @@ id: description
 --- ftd.column:
 width: fill
 height: fill
-align: center
-max-width: 1200 
+align: center 
 max-width if $is-mobile: fill 
 
 --- ftd.text: $title
@@ -787,14 +783,14 @@ width: fill
 
 --- ftd.column:
 width: fill
-padding-top if $PARENT.show-full-screen: 24
+padding-vertical if $PARENT.show-full-screen: 48
+padding-horizontal if $PARENT.show-full-screen: 48
 id: description
 
 --- ftd.column:
 width: fill
 height: fill
-align: center
-max-width: 1200 
+align: center 
 max-width if $is-mobile: fill 
 
 --- ftd.text: $title
@@ -861,7 +857,8 @@ margin-top if not $PARENT.show-full-screen: -64
 
 --- ftd.column:
 width: fill
-padding-top if $PARENT.show-full-screen: 24
+padding-vertical if $PARENT.show-full-screen: 48
+padding-horizontal if $PARENT.show-full-screen: 48
 align if $move-center: center
 id: change
 
@@ -872,7 +869,6 @@ width: fill
 id: description
 align: center
 spacing: 36
-max-width: 1200
 
 --- ftd.column:
 height: fill
@@ -937,7 +933,6 @@ width: fill
 id: description
 align: center
 spacing: 36
-max-width: 1200
 
 --- ftd.column:
 height: fill
@@ -1026,12 +1021,12 @@ margin-top if not $PARENT.show-full-screen: 132
 width: fill
 id: description
 align if $move-center: center
-padding-top if $PARENT.show-full-screen: 24
+padding-vertical if $PARENT.show-full-screen: 48
+padding-horizontal if $PARENT.show-full-screen: 48
 
 --- ftd.column:
 width: fill
 align: center
-max-width: 1200
 
 --- ftd.text: $title
 if: $title-font == regular
@@ -1085,20 +1080,19 @@ margin-top if not $PARENT.show-full-screen: -64
 --- ftd.column:
 width: fill
 align if $move-center: center
-padding-top if $PARENT.show-full-screen: 24
+padding-vertical if $PARENT.show-full-screen: 48
+padding-horizontal if $PARENT.show-full-screen: 48
 
 --- ftd.row:
 width: fill
 id: description
 spacing: 36
 align: center
-max-width: 1200
 
 --- ftd.column:
 width: fill
 align: center
 id: one-column
-max-width: 1200
 
 --- ftd.text: $title
 if: $title-font == regular
@@ -1216,14 +1210,14 @@ id: main
 if: $image is not null
 id: description
 align if $move-center: center
-padding-top if $PARENT.show-full-screen: 24
+padding-vertical if $PARENT.show-full-screen: 48
+padding-horizontal if $PARENT.show-full-screen: 48
 width: fill
 
 --- ftd.column:
 width: fill
 height: fill
 align: center
-max-width: 1200
 id: image-container
 
 --- ftd.column:
@@ -1287,13 +1281,11 @@ align: bottom
 id: description
 width: fill
 align: center
-max-width: 1200
 
 --- ftd.column:
 width: fill
 height: fill
 align: center
-max-width: 1200
 
 --- ftd.text: $title
 if: $body-font == regular
@@ -1354,13 +1346,13 @@ margin-top if not $PARENT.show-full-screen: 132
 width: fill
 id: description
 align if $move-center: center
-padding-top if $PARENT.show-full-screen: 24
+padding-vertical if $PARENT.show-full-screen: 48
+padding-horizontal if $PARENT.show-full-screen: 48
 
 --- ftd.column:
 width: fill
 align: center
 spacing: 36
-max-width: 1200
 
 --- ftd.text: $title
 if: $title-font == regular
@@ -1437,4 +1429,3 @@ align: center
 width: fill
 align: center
 spacing: 36
-max-width: 1200
