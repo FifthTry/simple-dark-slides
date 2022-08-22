@@ -684,10 +684,9 @@ width: fill
 
 --- ftd.image:
 src: $image
-width: auto
+width: fill
 height: auto
-max-width: fit-content
-max-height if $is-mobile: 320
+
 
 --- container: description
 
@@ -704,10 +703,11 @@ width: fill
 
 --- ftd.image:
 src: $image
-width: auto
+width: fill
 height: auto
-max-width: fit-content
+max-height if not $is-mobile: 360
 max-height if $is-mobile: 320
+
 
 --- container: right
 
@@ -1024,7 +1024,7 @@ align: center
 
 --- ftd.image:
 src: $image
-width: auto
+width: fill
 height: auto
 
 
