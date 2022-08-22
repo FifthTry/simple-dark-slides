@@ -1263,11 +1263,12 @@ max-width: 740
 --- ftd.image:
 if: not $is-mobile
 src: $image
-width: auto
+width: fill
 max-width if not $PARENT.show-full-screen: 600
-max-width if $PARENT.show-full-screen: 800
+max-width if $PARENT.show-full-screen: 700
 max-width if $is-mobile: 600
 height: auto
+
 
 --- container: image-container
 
