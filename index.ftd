@@ -1025,7 +1025,7 @@ align: center
 --- ftd.image:
 src: $image
 width: fill
-height: auto
+height: fill
 
 
 
@@ -1211,7 +1211,7 @@ width: fill
 --- ftd.image:
 if: $body is null
 src: $image
-width: auto
+width: fill
 height: fill
 
 
