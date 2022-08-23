@@ -1904,7 +1904,7 @@ id: image-container
 if: not $is-mobile
 src: $image
 width: fill
-max-width if $PARENT.show-full-screen: percent 65
+max-width if $PARENT.show-full-screen: percent 60
 max-width if not $PARENT.show-full-screen: percent 50
 height: auto
 
