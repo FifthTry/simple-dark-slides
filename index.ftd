@@ -686,6 +686,7 @@ width: fill
 src: $image
 width: fill
 height: auto
+max-width: percent 100
 
 
 --- container: description
@@ -705,8 +706,7 @@ width: fill
 src: $image
 width: fill
 height: auto
-max-height if not $is-mobile: 360
-max-height if $is-mobile: 320
+max-width: percent 100
 
 
 --- container: right
@@ -734,9 +734,6 @@ text: $body
 role: $slides.body-large
 color: $fpm.color.main.text-strong
 width: fill
-
-
-
 
 
 -- ftd.column title-only:
@@ -802,8 +799,11 @@ margin-bottom: 24
 if: $image is not null
 src: $image
 align if $center-image: center
-max-width: 600
 max-height if $is-mobile: 320
+width: fill
+height: auto
+max-width if not $PARENT.show-full-screen: percent 50
+max-width if  $PARENT.show-full-screen: percent 50
 margin-top if $move-top is not null: $move-top
 margin-bottom if $move-bottom is not null: $move-bottom
 
@@ -851,12 +851,10 @@ margin-bottom: 24
 --- ftd.image:
 if: $image is not null
 src: $image
-width: auto
 align if $center-image: center
-max-width: auto
+width: fill
 height: auto
-max-height if not $is-mobile: 400
-max-height if $is-mobile: 320
+max-width: percent 50
 margin-top if $move-top is not null: $move-top
 margin-bottom if $move-bottom is not null: $move-bottom
 
@@ -1025,9 +1023,8 @@ align: center
 --- ftd.image:
 src: $image
 width: fill
-height: fill
-
-
+height: auto
+max-width: percent 100
 
 
 
@@ -1254,30 +1251,23 @@ height: fill
 align: center
 id: image-container
 
---- ftd.column:
-width: fill
-height: auto
-align: left
-max-width: 740
-
 --- ftd.image:
 if: not $is-mobile
 src: $image
 width: fill
-max-width if not $PARENT.show-full-screen: 600
-max-width if $PARENT.show-full-screen: 700
-max-width if $is-mobile: 600
+max-width if $PARENT.show-full-screen: percent 65
+max-width if not $PARENT.show-full-screen: percent 50
 height: auto
-
 
 --- container: image-container
 
 --- ftd.image:
 if: $is-mobile
 src: $image
-width: auto
-max-width: 600
+width: fill
 height: auto
+max-width: percent 60
+
 
 --- container: image-container
 
