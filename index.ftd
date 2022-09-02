@@ -1102,8 +1102,8 @@ margin-top if not $PARENT.show-full-screen: -64
 
 --- ftd.column:
 width: fill
-padding-vertical if $PARENT.show-full-screen: 24
-padding-horizontal if not $PARENT.show-full-screen: 48
+padding-vertical if $PARENT.show-full-screen: 48
+padding-horizontal if $PARENT.show-full-screen: 48
 align if $move-center: center
 id: description
 
