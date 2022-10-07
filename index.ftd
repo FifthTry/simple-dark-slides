@@ -255,11 +255,11 @@ image: $assets.files.image-placeholder.png
 body-font: regular
 image: $assets.files.image-placeholder.png
 
---- caption: Regular font slide caption 
+--- caption: Medium font slide caption 
 body-font: medium
 image: $assets.files.image-placeholder.png
 
---- caption: Regular font slide caption 
+--- caption: Large font slide caption 
 body-font: large
 image: $assets.files.image-placeholder.png
 
