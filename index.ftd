@@ -43,48 +43,76 @@ lang: ftd
 
 \-- slide.presentation:
 embed: <boolean false(if full screen mode) - default true>
-current : integer
 
-\--- slides.title-slide: Add slide title here
-subtitle: Add subtitle here
 
-\--- slides.section-header: Add section header here
+\--- slides.title-slide: Regular font title of presentation
+title-font: regular
+sub-title-font: regular
+subtitle: Regular font sub-title
 
-\--- slides.title-and-body: Add slide title here
+\--- slides.section-header: Section header with regular font
+title-font: regular
 
-Add body here...
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-- sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+\--- slides.title-and-body: Slide title with regular font
+title-font: regular
+body-font: regular
 
-\--- slides.title-and-2-columns: Add slide title here
-left-image: $assets.files.image-placeholder.png
-right-body: $right-body
+Regular font size of body content
+1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-\--- slides.title-only: Add slide title here
+\--- slides.title-and-2-columns: Regular title of 2 columns slide
+title-font: regular
+body-font: regular
 image: $assets.files.image-placeholder.png
 
-\--- slides.one-column-text: Add slide title here
+Regular size font body here...
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+\--- slides.title-only: Slide title with regular font
+title-font: regular
 image: $assets.files.image-placeholder.png
 
-orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-
-\--- slides.main-point: Add slide title here
-
-\--- slides.section-title-and-description: Add slide title here
-subtitle: Add subtitle here
+\--- slides.one-column-text: Slide title with regular font
+title-font: regular
+body-font: regular
 image: $assets.files.image-placeholder.png
 
-\--- slides.caption: Add caption here
+Regular size font body here...
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+\--- slides.main-point: Slide title with regular font
+title-font: regular
+
+\--- slides.section-title-and-description: Regular font section title
+title-font: regular
+sub-title-font: regular
+subtitle: Regular font sub title here
 image: $assets.files.image-placeholder.png
 
-\--- slides.big-number: Add big caption here
-subtitle: Add subtitle here
+\--- slides.caption: Regular font slide caption 
+body-font: regular
+image: $assets.files.image-placeholder.png
 
-\--- slides.blank: 
+\--- slides.big-number: Regular font big slide title
+title-font: regular
+sub-title-font: regular
+subtitle: Regular font slide sub title
+
+\--- slides.centered: Centered slide with regular font 
+title-font: regular
+sub-title-font: regular
+subtitle: Large font slide sub title
+image: $assets.files.image-placeholder.png
+
+Click on `full-screen` mode `squre` icon to see full-screen view. On `full-screen`
+mode to navigate slides press `left` OR `right` arrow keys to move to left OR 
+right slide.
+
+\--- slides.blank:
+
+
+
+
 
 
 -- dark-presentation:
@@ -587,6 +615,7 @@ Press `esc` key to exit full screen view.
 overlay-bg-color: $fpm.color.main.text-strong
 show-full-screen: false
 bg-color: $fpm.color.main.background.base
+
 
 
 
